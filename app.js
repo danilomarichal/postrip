@@ -38,10 +38,22 @@ app.use(session({
   saveUninitialized: true,
   cookie: { secure: false }
 }));
-var scdb = pgp('postgres://rcoppa@localhost:5432/cities');
-var db = pgp('postgres://rcoppa@localhost:5432/travelers');
+//var scdb = pgp('postgres://rcoppa@localhost:5432/cities');
+//var db = pgp('postgres://rcoppa@localhost:5432/travelers');
+var scdb = pgp('postgres://bqhngbpalviafz:7d9bb46fe1ecb265b9d5dbe55fd0499c10442e0138a537fa3077bc7b22db56d4@ec2-23-21-158-253.compute-1.amazonaws.com:5432/dd6orcqrmp4jva')
+var db = pgp('postgres://eyoapceooblfya:58f11ea131e0ed58eb81d3e92acb8818d90c4040fcef83ec433c5de155d121f0@ec2-54-243-252-232.compute-1.amazonaws.com:5432/d4bo9qfmsuh9c4')
 
+pg.defaults.ssl = true;
+pg.connect(process.env.DATABASE_URL, function(err, client) {
+  if (err) throw err;
+  console.log('Connected to postgres! Getting schemas...');
 
+  client
+    .query('SELECT table_schema,table_name FROM information_schema.tables;')
+    .on('row', function(row) {
+      console.log(JSON.stringify(row));
+    });
+});
 
 // Routes to destination in cities db
 
