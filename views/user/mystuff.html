@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Postrip</title>
+  <link rel="stylesheet" href="/stylesheets/style.css"/>
+  <script src="../../javascripts/jquery.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Antic|Covered+By+Your+Grace|Monotonfamily=Roboto+Condensed" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+</head>
+<body>
+<div class="content">
+<div class="nav_bar">
+<hr class="divide_top">
+ <ul>
+
+  <li id="logo"><a  href="/home" ><div><img id="log" src="images/logo.png" ></div></a><li>
+    <li id="app_name"><a  href="/home" >Postrip</a></li>
+    <li class="items"><a  href="/home" >Home</a></li>
+    <li class="items"><a  href="/places" >Destinations 2017</a></li>
+     <li class="items"><a  href="/posts" >Post Your Trip</a></li>
+     <li class="items"><a  href="/postrips" >User Advice</a></li>
+     <li class="items"><a  href="/map" >Google map</a></li>
+    <li class="out"><a class="diff" href="/logout">Logout</a></li>
+   <li class="out"><a class="diff" href="/user">Profile</a></li>
+ </ul>
+</div>
+<hr class="divide">
+    <h1 class="my_postrips">My Postrips</h1>
+
+{{#posts}}
+<div class="every_fav">
+ <a class="my_favs" href = "/posts/{{id}}"><div class="fav_name">{{country}}</div><br><img class="fav_link" src="{{image_one}}"></a>
+</div>
+{{/posts}}
+<footer>
+<hr class="horse">
+<p class="reg">© 2017 Danilo Marichal. All rights reserved.</p>
+
+</footer>
+</body>
+<script src="/javascripts/script.js"></script>
+</html>

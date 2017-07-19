@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Postrip</title>
+  <link rel="stylesheet" href="/stylesheets/style.css"/>
+  <script src="../../javascripts/jquery.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Antic|Covered+By+Your+Grace|Monoton" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+</head>
+<body>
+<div class="content">
+<div class="nav_bar">
+<hr class="divide_top">
+ <ul>
+
+  <li id="logo"><a  href="/home" ><div><img id="log" src="../images/logo.png" ></div></a><li>
+    <li id="app_name"><a  href="/home" >Postrip</a></li>
+    <li class="items"><a  href="/home" >Home</a></li>
+    <li class="items"><a  href="/places" >Destinations 2017</a></li>
+     <li class="items"><a  href="/posts" >Post Your Trip</a></li>
+     <li class="items"><a  href="/postrips" >User Advice</a></li>
+     <li class="items"><a  href="/map" >Google map</a></li>
+    <li class="out"><a class="diff" href="/logout">Logout</a></li>
+   <li class="out"><a class="diff" href="/user">Profile</a></li>
+ </ul>
+</div>
+<hr class="divide">
+
+
+  <div class = "user-suggestion">
+<form id="form_fav" action="/favorites" method="post">
+        <h1 class="country_title">{{country}}</h1>
+        <div class="all_pictures">
+        <img id="myImg1" class="scale" src='{{imageOne}}' height="300px" width="400px">
+        <img id="myImg2" class="scale" src='{{imageTwo}}' height="300px" width="400px">
+        <img id="myImg3" class="scale" src='{{imageThree}}' height="300px" width="400px">
+        </div>
+        <div class="information">
+        <p class="user_comment">User's Comment:<br><p class="answer">{{comment}}</p></p>
+        <p class="user_comment">A Place To Visit in {{country}}:<br><p class="answer">{{place}}</p></p>
+        <p class="user_comment">You Can't Miss:<br><p class="answer">{{suggestion}}</p></p>
+        <p class="user_comment">Don't Leave Without Trying the Food at:<br><p class="answer">{{restaurant}}</p></p>
+        </div>
+ </form>
+</div>
+
+<div id="myModal" class="modal">
+<!-- The Close Button -->
+  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+<!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+<!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>
+
+
+<div class = "hidden">
+<form id="form_fav" action="/favorites" method="post">
+        <input type="hidden" name="country" value='{{country}}'>
+        <input type="hidden" name="image_one" value='{{imageOne}}'>
+        <input type="hidden" name="image_two" value='{{imageTwo}}'>
+        <input type="hidden" name="image_three" value='{{imageThree}}'>
+        <input type="hidden" name="comment" value='{{comment}}'>
+        <input type="hidden" name="place" value='{{place}}'>
+        <input type="hidden" name="suggestion" value='{{suggestion}}'>
+        <input type="hidden" name="restaurant" value='{{restaurant}}'>
+ <br>
+ <br>
+ <button id='fav' type="submit">Save as Favorite!</button>
+</form>
+  </div>
+  </div>
+<footer>
+<hr class="horse">
+<p class="reg">© 2017 Danilo Marichal. All rights reserved.</p>
+
+</footer>
+</body>
+<script src="/javascripts/script.js"></script>
+</html>
+

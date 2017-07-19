@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Postrip</title>
+  <link rel="stylesheet" href="/stylesheets/style.css"/>
+  <script src="../../javascripts/jquery.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Antic|Covered+By+Your+Grace|Monotonfamily=Roboto+Condensed" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+</head>
+<body>
+<div class="content">
+<div class="nav_bar">
+<hr class="divide_top">
+ <ul>
+
+  <li id="logo"><a  href="/home" ><div><img id="log" src="../images/logo.png" ></div></a><li>
+    <li id="app_name"><a  href="/home" >Postrip</a></li>
+    <li class="items"><a  href="/home" >Home</a></li>
+    <li class="items"><a  href="/places" >Destinations 2017</a></li>
+     <li class="items"><a  href="/posts" >Post Your Trip</a></li>
+     <li class="items"><a  href="/postrips" >User Advice</a></li>
+     <li class="items"><a  href="/map" >Google map</a></li>
+    <li class="out"><a class="diff" href="/logout">Logout</a></li>
+   <li class="out"><a class="diff" href="/user">Profile</a></li>
+ </ul>
+</div>
+<hr class="divide">
+    <h1 class="my_postrips">My Favs</h1>
+
+  <div id = "favoritos" >
+      <h1 class="stretch">{{country}}</h1>
+      <img id="myImg1" class="scale" src='{{imageOne}}' height="200px" width="auto">
+      <img id="myImg2" class="scale" src='{{imageTwo}}' height="200px" width="auto">
+      <img id="myImg3" class="scale" src='{{imageThree}}' height="200px" width="auto">
+      <p class="user_com">User's comment: {{comment}}. A Place to Visit in {{country}}: "{{place}}". Oh You Can't Miss: {{suggestion}}, and dont leave without trying the food at: {{restaurant}}</p>
+
+  </div>
+  <div id="myModal" class="modal">
+<!-- The Close Button -->
+  <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+<!-- Modal Content (The Image) -->
+  <img class="modal-content" id="img01">
+<!-- Modal Caption (Image Text) -->
+  <div id="caption"></div>
+</div>
+<footer>
+<hr class="horse">
+<p class="reg">© 2017 Danilo Marichal. All rights reserved.</p>
+
+</footer>
+</body>
+<script src="/javascripts/script.js"></script>
+</html>

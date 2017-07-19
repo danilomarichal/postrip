@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Postrip</title>
+  <link rel="stylesheet" href="/stylesheets/style.css"/>
+  <script src="../../javascripts/jquery.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Antic|Covered+By+Your+Grace|Monotonfamily=Roboto+Condensed" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+</head>
+<body>
+<div class="content">
+<div class="nav_bar">
+<hr class="divide_top">
+ <ul>
+
+  <li id="logo"><a  href="/home" ><div><img id="log" src="images/logo.png" ></div></a><li>
+    <li id="app_name"><a  href="/home" >Postrip</a></li>
+    <li class="items"><a  href="/home" >Home</a></li>
+    <li class="items"><a  href="/places" >Destinations 2017</a></li>
+     <li class="items"><a  href="/posts" >Post Your Trip</a></li>
+     <li class="items"><a  href="/postrips" >User Advice</a></li>
+     <li class="items"><a  href="/map" >Google map</a></li>
+    <li class="out"><a class="diff" href="/logout">Logout</a></li>
+   <li class="out"><a class="diff" href="/user">Profile</a></li>
+ </ul>
+</div>
+<hr class="divide">
+  <div id="posting">
+    <h2 id = "user">Hey <div id="user_email">{{name}}!</div>Post your awesome trip here!</h2>
+
+<section id="form_left">
+   <form id="form_post" action="/posts" method="post">
+     <p class="label"> Destination</p>
+      <input class="posting-box" type="text" placeholder="City, Country" name="country">
+      <p class="label">Image Url 1</p>
+      <!--<input class="file" type="file" name="upl" accept="image/*">-->
+      <input class="file" type="text" name="image_one">
+
+      <p class="label">Image Url 2</p>
+      <input class="file" type="text" name="image_two">
+
+      <p class="label">Image Url 3</p>
+      <input class="file" type="text" name="image_three">
+
+      <p class="label">Description</p>
+      <textarea class="posting-box" row="8" cols="50" type="text" placeholder="Comments" name="comment"></textarea>
+
+</section>
+<section id="form_right">
+    <h1 class="recommendations"></h1><br>
+    <p class="label">You have to visit...</p>
+    <input class="file" type="text" name="place">
+    <p class="label">You can't miss...</p>
+    <input class="file" type="text" name="suggestion">
+    <p class="label">Try the food at...</p>
+    <input class="file" type="text" name="restaurant">
+ <br>
+ <br>
+ <button id='pic_post' type="submit">POST!</button>
+
+</section>
+  </div>
+</div>
+<footer>
+<hr class="horse">
+<p class="reg">© 2017 Danilo Marichal. All rights reserved.</p>
+
+</footer>
+</body>
+<script src="/javascripts/script.js"></script>
+</html>
