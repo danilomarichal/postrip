@@ -7,7 +7,7 @@ $(".go-back").on('click', function(){
 
 
 var callAjax = function(){
-  var key="68f4245b2e8c4c6d81828596e6ef2a79";
+  var key="xxxxxxxxxxxxxxxxxxx";
     $.ajax({
         url:"https://newsapi.org/v1/articles?source=national-geographic&sortBy=top&apiKey="+key,
         method:"GET",
